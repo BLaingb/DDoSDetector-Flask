@@ -48,3 +48,12 @@ def predict():
             "class": "ddos"
         }
     return abort(400)
+
+@app.route("/test")
+def test():
+    print("In test function")
+    return { "test": True }
+
+if __name__ == "__main__":
+    app.run(debug=True, host='0.0.0.0')
+
